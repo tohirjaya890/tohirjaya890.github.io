@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tewary ENT Ltd | Spesialis Medis Terpercaya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f4c81; /* Classic Medical Blue */
+            --accent: #22d3ee;
+            --bg-light: #f8fafc;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 10% 20%, rgba(34, 211, 238, 0.05) 0%, transparent 20%),
+                              radial-gradient(circle at 90% 80%, rgba(15, 76, 129, 0.05) 0%, transparent 20%);
+        }
+
+        header {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary);
+            letter-spacing: -1px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        /* Bento Grid Layout */
+        .bento-container {
+            padding: 20px 5% 80px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .bento-item {
+            background: var(--card-bg);
+            border-radius: 32px;
+            padding: 30px;
+            border: 1px solid rgba(15, 76, 129, 0.1);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bento-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .card-1 { grid-column: span 2; grid-row: span 2; background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1000'); background-size: cover; background-position: center; min-height: 300px; }
+        .card-2 { grid-column: span 2; background: var(--primary); color: white; display: flex; flex-direction: column; justify-content: center; }
+        .card-3 { grid-column: span 1; }
+        .card-4 { grid-column: span 1; background: var(--accent); color: var(--primary); }
+        .card-5 { grid-column: span 2; display: flex; align-items: center; gap: 20px; }
+
+        .bento-item h3 { font-size: 1.4rem; margin-bottom: 10px; }
+        .bento-item p { font-size: 0.95rem; opacity: 0.9; }
+
+        /* Footer */
+        footer {
+            padding: 60px 5%;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .address { font-style: normal; color: var(--text-muted); margin-bottom: 20px; }
+        .email-link { 
+            color: var(--primary); 
+            font-weight: 600; 
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid var(--primary);
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        .email-link:hover { background: var(--primary); color: white; }
+
+        @media (max-width: 900px) {
+            .bento-container { grid-template-columns: repeat(2, 1fr); }
+            .card-1, .card-2, .card-5 { grid-column: span 2; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">TEWARY ENT.</div>
+        <div style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted);">EST. 2026</div>
+    </header>
+
+    <section class="hero">
+        <h1>Kesehatan THT Anda, Prioritas Kami.</h1>
+        <p>Layanan medis spesialis telinga, hidung, dan tenggorokan dengan pendekatan personal dan teknologi modern di jantung Cardiff.</p>
+    </section>
+
+    <div class="bento-container">
+        <div class="bento-item card-1"></div>
+
+        <div class="bento-item card-2">
+            <h3>Keahlian Spesialis</h3>
+            <p>Didukung oleh praktisi medis berlisensi untuk memberikan diagnosa yang akurat dan perawatan yang efektif.</p>
+        </div>
+
+        <div class="bento-item card-3">
+            <h3 style="font-size: 2rem;">👂</h3>
+            <h3>Audiologi</h3>
+            <p>Pemeriksaan pendengaran komprehensif.</p>
+        </div>
+
+        <div class="bento-item card-4">
+            <h3 style="font-size: 2rem;">🩺</h3>
+            <h3>Konsultasi</h3>
+            <p>Sesi privat dengan dokter spesialis.</p>
+        </div>
+
+        <div class="bento-item card-5">
+            <div style="flex: 1;">
+                <h3>Lokasi Strategis</h3>
+                <p>Akses mudah di wilayah Cardiff untuk kenyamanan pasien kami.</p>
+            </div>
+            <div style="width: 100px; height: 100px; background: #eee; border-radius: 20px; background-image: url('https://images.unsplash.com/photo-1505751172107-109d9490e571?auto=format&fit=crop&q=80&w=200'); background-size: cover;"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="address">
+            <strong>Tewary Ent Ltd</strong><br>
+            5 Clos Derwen, Cardiff, CF23 5HJ, United Kingdom
+        </p>
+        <a href="mailto:testdevtool@gmail.com" class="email-link">testdevtool@gmail.com</a>
+        <p style="margin-top: 40px; font-size: 0.75rem; color: var(--text-muted);">
+            &copy; 2026 Tewary Ent Ltd. Registered in England & Wales.
+        </p>
+    </footer>
+
+</body>
+</html>
